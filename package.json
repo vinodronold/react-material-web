@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "material-design-icons": "^3.0.1",
+    "classnames": "^2.2.5",
+    "material-components-web": "^0.7.0",
     "react-scripts": "0.9.5"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "material-components-web": "^0.7.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

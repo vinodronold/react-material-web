@@ -1,6 +1,7 @@
 import React, { PropTypes } from "react";
 import classnames from "classnames";
 import "@material/button/dist/mdc.button.min.css";
+import Ripple from '../Ripple';
 
 const _propTypes = {
   accent: PropTypes.bool,
@@ -11,6 +12,7 @@ const _propTypes = {
   primary: PropTypes.bool,
   raised: PropTypes.bool
 };
+
 
 const Button = (
   {
@@ -41,4 +43,4 @@ const Button = (
 
 Button.propTypes = _propTypes;
 
-export default Button;
+export default Ripple(Button);

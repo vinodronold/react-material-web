@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
-import "@material/button/dist/mdc.button.min.css";
 import Ripple from '../Ripple';
+
+import "@material/button/dist/mdc.button.min.css";
 
 class Button extends Component {
 

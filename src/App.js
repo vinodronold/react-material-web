@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ButtonExample from "./docs/ButtonExample";
 import FabExample from "./docs/FabExample";
+import CardExample from "./docs/CardExample";
+
 import "./App.css";
 
 class App extends Component {
@@ -9,12 +11,15 @@ class App extends Component {
       margin: 10
     };
     return (
-      <div className="App">
+      <div>
         <div className="App-header">
           <h2>React MDC Web</h2>
         </div>
-        <ButtonExample styles={styles} />
-        <FabExample styles={styles} />
+        <div style={styles}>
+          <ButtonExample styles={styles} />
+          <FabExample styles={styles} />
+          <CardExample />
+        </div>
       </div>
     );
   }

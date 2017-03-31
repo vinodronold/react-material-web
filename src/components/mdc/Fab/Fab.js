@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
-import "@material/fab/dist/mdc.fab.min.css";
 import Ripple from '../Ripple';
+
+import "@material/fab/dist/mdc.fab.min.css";
 
 class Fab extends Component {
 

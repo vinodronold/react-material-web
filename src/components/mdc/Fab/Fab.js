@@ -1,42 +1,48 @@
-import React, { PropTypes } from "react";
+import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import "@material/fab/dist/mdc.fab.min.css";
+import Ripple from '../Ripple';
 
-const _propType = {
-  children: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  mini: PropTypes.bool,
-  plain: PropTypes.bool
-};
+class Fab extends Component {
 
-const Fab = (
-  {
-    children,
-    className,
-    mini,
-    plain,
-    ...otherProps
+  static propTypes = {
+    children: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    mini: PropTypes.bool,
+    plain: PropTypes.bool,
+    ripple: PropTypes.bool
+  };
+
+  render() {
+    const { children,
+      className,
+      mini,
+      plain,
+      ripple,
+      ...otherProps
+  } = this.props;
+
+    const _baseClassName = "mdc-fab";
+    const _cls = classnames(
+      _baseClassName,
+      {
+        [`${_baseClassName}--mini`]: mini,
+        [`${_baseClassName}--plain`]: plain
+      },
+      "material-icons",
+      className
+    );
+    
+    const _props = { ...otherProps, "className": _cls, "ref": node => this.node = ripple && node };
+    return (
+      <button {..._props} aria-label={children}>
+        <span className={[`${_baseClassName}__icon`]}>
+          {children}
+        </span>
+      </button>
+    );
   }
-) => {
-  const _baseClassName = "mdc-fab";
-  const _cls = classnames(
-    _baseClassName,
-    {
-      [`${_baseClassName}--mini`]: mini,
-      [`${_baseClassName}--plain`]: plain
-    },
-    "material-icons",
-    className
-  );
-  return (
-    <button className={_cls} {...otherProps} aria-label={children}>
-      <span className={[`${_baseClassName}__icon`]}>
-        {children}
-      </span>
-    </button>
-  );
-};
 
-Fab.propTypes = _propType;
+}
 
-export default Fab;
+export default Ripple(Fab);

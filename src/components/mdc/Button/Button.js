@@ -1,9 +1,8 @@
-import React, { PropTypes } from "react";
+import React, { Component, PropTypes } from "react";
 import classnames from "classnames";
 import "@material/button/dist/mdc.button.min.css";
-//import Ripple from '../Ripple';
+import Ripple from '../Ripple';
 
-/*
 class Button extends Component {
 
   static propTypes = {
@@ -12,8 +11,11 @@ class Button extends Component {
     className: PropTypes.string,
     compact: PropTypes.bool,
     dense: PropTypes.bool,
+    fab: PropTypes.bool,
+    href: PropTypes.string,
     primary: PropTypes.bool,
-    raised: PropTypes.bool
+    raised: PropTypes.bool,
+    ripple: PropTypes.bool
   };
 
   render() {
@@ -23,8 +25,11 @@ class Button extends Component {
       className,
       compact,
       dense,
+      fab,
+      href,
       primary,
       raised,
+      ripple,
       ...otherProps
   } = this.props;
 
@@ -40,52 +45,12 @@ class Button extends Component {
       },
       className
     );
-    return <button className={_cls} {...otherProps}>{children}</button>;
-
+    const _props = { ...otherProps, "className": _cls, "ref": node => this.node = ripple && node };
+    if (href) {
+      return <a href={href} {..._props}>{children}</a>
+    }
+    return <button {..._props}>{children}</button>
   };
-
-};
-*/
-
-const _propTypes = {
-  accent: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  compact: PropTypes.bool,
-  dense: PropTypes.bool,
-  primary: PropTypes.bool,
-  raised: PropTypes.bool
 };
 
-
-const Button = (
-  {
-    accent,
-    children,
-    className,
-    compact,
-    dense,
-    primary,
-    raised,
-    ...otherProps
-  }
-) => {
-  const _baseClassName = "mdc-button";
-  const _cls = classnames(
-    _baseClassName,
-    {
-      [`${_baseClassName}--accent`]: accent,
-      [`${_baseClassName}--compact`]: compact,
-      [`${_baseClassName}--dense`]: dense,
-      [`${_baseClassName}--primary`]: primary,
-      [`${_baseClassName}--raised`]: raised
-    },
-    className
-  );
-  return <button className={_cls} {...otherProps}>{children}</button>;
-};
-
-Button.propTypes = _propTypes;
-
-
-export default Button;
+export default Ripple(Button);

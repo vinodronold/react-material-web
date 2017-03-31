@@ -9,8 +9,17 @@ const FabExample = ({ styles }) => {
         <fieldset>
           <legend>Fabs</legend>
           <Fab style={styles} plain>favorite</Fab>
+          <Fab style={styles} mini plain>favorite</Fab>
           <Fab style={styles}>favorite</Fab>
           <Fab style={styles} mini>favorite</Fab>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Ripple Fabs</legend>
+          <Fab style={styles} ripple plain>favorite</Fab>
+          <Fab style={styles} ripple mini plain>favorite</Fab>
+          <Fab style={styles} ripple>favorite</Fab>
+          <Fab style={styles} ripple mini>favorite</Fab>
         </fieldset>
       </section>
     </div>

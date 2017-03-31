@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "../components/mdc/Button";
-
 const ButtonExample = ({ styles }) => {
   return (
     <div>
@@ -13,6 +12,7 @@ const ButtonExample = ({ styles }) => {
           <Button style={styles} primary>PRIMARY</Button>
           <Button style={styles} compact>COMPACT</Button>
           <Button style={styles} dense>DENSE</Button>
+          
         </fieldset>
         <fieldset>
           <legend>Raised Buttons</legend>

@@ -1,36 +1,25 @@
-import React from "react";
-import Button from '../Button';
+import React, {PropTypes} from "react";
 import classnames from "classnames";
+import { baseClassName } from './const';
 
 import "@material/card/dist/mdc.card.min.css";
 
-const Card = ({ large }) => {
+const _propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string
+};
 
-    const _baseClassName = "mdc-card";
-    const _titleCls = classnames(
-        [`${_baseClassName}__title`],
-        { [`${_baseClassName}__title--large`]: large }
+const Card = ({ children, className, ...otherProps }) => {
+    const _cls = classnames(
+        [`${baseClassName}__title`],
+        className
     );
 
     return (
-        <div className={_baseClassName}>
-            <section className={[`${_baseClassName}__primary`]}>
-                <h1 className={_titleCls}>Title goes here</h1>
-                <h2 className={[`${_baseClassName}__subtitle`]}>Subtitle here</h2>
-            </section>
-            <section className="mdc-card__supporting-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat.
-            </section>
-            <section className="mdc-card__actions">
-                <Button compact className="mdc-card__action">Action 1</Button>
-                <Button compact className="mdc-card__action">Action 2</Button>
-                <Button compact className="mdc-card__action">Action 3</Button>
-            </section>
-        </div>
+        <div className={_cls} {...otherProps}>{children}</div>
     );
 };
+
+Card.PropTypes = _propTypes;
 
 export default Card;

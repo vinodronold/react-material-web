@@ -1,2 +1,2 @@
-import Ripple from './Ripple';
-export default Ripple;
+import Ripple from './Ripple'
+export default Ripple

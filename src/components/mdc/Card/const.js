@@ -1,1 +1,1 @@
-export const baseClassName =  "mdc-card";
+export const baseClassName =  "mdc-card"

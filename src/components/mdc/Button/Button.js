@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from "react";
-import classnames from "classnames";
-import Ripple from '../Ripple';
+import React, { Component, PropTypes } from "react"
+import classnames from "classnames"
+import Ripple from '../Ripple'
+import { themeDark } from '../theme/const'
 
-import "@material/button/dist/mdc.button.min.css";
+import "@material/button/dist/mdc.button.min.css"
 
 class Button extends Component {
 
@@ -11,13 +12,14 @@ class Button extends Component {
     children: PropTypes.node,
     className: PropTypes.string,
     compact: PropTypes.bool,
+    dark: PropTypes.bool,
     dense: PropTypes.bool,
     fab: PropTypes.bool,
     href: PropTypes.string,
     primary: PropTypes.bool,
     raised: PropTypes.bool,
     ripple: PropTypes.bool
-  };
+  }
 
   render() {
     const {
@@ -25,6 +27,7 @@ class Button extends Component {
       children,
       className,
       compact,
+      dark,
       dense,
       fab,
       href,
@@ -32,9 +35,9 @@ class Button extends Component {
       raised,
       ripple,
       ...otherProps
-  } = this.props;
+  } = this.props
 
-    const _baseClassName = "mdc-button";
+    const _baseClassName = "mdc-button"
     const _cls = classnames(
       _baseClassName,
       {
@@ -42,16 +45,17 @@ class Button extends Component {
         [`${_baseClassName}--compact`]: compact,
         [`${_baseClassName}--dense`]: dense,
         [`${_baseClassName}--primary`]: primary,
-        [`${_baseClassName}--raised`]: raised
+        [`${_baseClassName}--raised`]: raised,
+        [`${_baseClassName}--${themeDark}`]: dark
       },
       className
-    );
-    const _props = { ...otherProps, "className": _cls, "ref": node => this.node = ripple && node };
+    )
+    const _props = { ...otherProps, "className": _cls, "ref": node => this.node = ripple && node }
     if (href) {
       return <a href={href} {..._props}>{children}</a>
     }
     return <button {..._props}>{children}</button>
-  };
-};
+  }
+}
 
-export default Ripple(Button);
+export default Ripple(Button)

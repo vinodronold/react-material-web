@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from "react";
-import classnames from "classnames";
-import Ripple from '../Ripple';
+import React, { Component, PropTypes } from "react"
+import classnames from "classnames"
+import Ripple from '../Ripple'
 
-import "@material/fab/dist/mdc.fab.min.css";
+import "@material/fab/dist/mdc.fab.min.css"
 
 class Fab extends Component {
 
@@ -12,7 +12,7 @@ class Fab extends Component {
     mini: PropTypes.bool,
     plain: PropTypes.bool,
     ripple: PropTypes.bool
-  };
+  }
 
   render() {
     const { children,
@@ -21,9 +21,9 @@ class Fab extends Component {
       plain,
       ripple,
       ...otherProps
-  } = this.props;
+  } = this.props
 
-    const _baseClassName = "mdc-fab";
+    const _baseClassName = "mdc-fab"
     const _cls = classnames(
       _baseClassName,
       {
@@ -32,18 +32,18 @@ class Fab extends Component {
       },
       "material-icons",
       className
-    );
+    )
     
-    const _props = { ...otherProps, "className": _cls, "ref": node => this.node = ripple && node };
+    const _props = { ...otherProps, "className": _cls, "ref": node => this.node = ripple && node }
     return (
       <button {..._props} aria-label={children}>
         <span className={[`${_baseClassName}__icon`]}>
           {children}
         </span>
       </button>
-    );
+    )
   }
 
 }
 
-export default Ripple(Fab);
+export default Ripple(Fab)

@@ -9,7 +9,7 @@ const CardExample = ({ styles }) => {
             <section>
                 <fieldset>
                     <legend>Cards</legend>
-                    <Card>
+                    <Card dark>
                         <CardHeader>
                             <CardTitle large> Cards Title </CardTitle>
                             <CardSubTitle> Cards Sub Title </CardSubTitle>

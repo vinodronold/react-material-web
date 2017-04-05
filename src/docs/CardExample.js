@@ -19,10 +19,10 @@ const CardExample = ({ styles }) => {
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                             nisi ut aliquip ex ea commodo consequat.
                         </CardText>
-                        <CardActions>
+                        <CardActions vertical>
                             <Button raised primary compact>Action 1</Button>
-                            <Button raised primary compact accent>Action 2</Button>
-                            <Button raised compact>Action 3</Button>
+                            <Button raised primary accent>Action 2</Button>
+                            <Button raised>Action 3</Button>
                         </CardActions>
                     </Card>
                 </fieldset>

@@ -4,21 +4,26 @@ import { baseClassName } from './const'
 
 const _propTypes = {
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
+    dark: PropTypes.bool,
+    vertical: PropTypes.bool
 }
 
-const CardActions = ({ children, className, dark, ...otherProps }) => {
+const CardActions = ({ children, className, dark, vertical, ...otherProps }) => {
 
     const _cls = classnames(
         [`${baseClassName}__actions`],
+        { [`${baseClassName}__actions--vertical`]: vertical },
         className
     )
 
     const _actionChildren = React.Children.map(children, (action, idx) => {
+        console.log(action.props.compact)
         return React.cloneElement(action,
             {
                 key: idx,
                 dark,
+                compact: action.props.compact || vertical,
                 className: classnames(action.props.className, [`${baseClassName}__action`])
             }
         )

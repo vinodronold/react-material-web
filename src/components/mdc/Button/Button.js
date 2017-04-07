@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react"
 import classnames from "classnames"
-import Ripple from '../Ripple'
+import Ripple from '../ripple'
 import { themeDark } from '../theme/const'
 
 import "@material/button/dist/mdc.button.min.css"

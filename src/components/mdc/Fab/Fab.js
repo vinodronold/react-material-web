@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from "react"
 import classnames from "classnames"
-import Ripple from '../Ripple'
+import Ripple from '../ripple'
 
 import "@material/fab/dist/mdc.fab.min.css"
 

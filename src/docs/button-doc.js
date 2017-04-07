@@ -1,8 +1,11 @@
 import React from "react";
 import Button from "../components/mdc/Button";
-const ButtonExample = ({ styles }) => {
+const ButtonDoc = () => {
+  const styles = {
+    margin: 10
+  }
   return (
-    <div>
+    <div style={styles}>
       <h3>BUTTON</h3>
       <section>
         <fieldset>
@@ -50,4 +53,4 @@ const ButtonExample = ({ styles }) => {
   );
 };
 
-export default ButtonExample;
+export default ButtonDoc;

@@ -1,28 +1,36 @@
-import React, { Component } from "react";
-import ButtonExample from "./docs/ButtonExample";
-import FabExample from "./docs/FabExample";
-import CardExample from "./docs/CardExample";
+import React from "react"
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import Home from "./docs/home"
+import ButtonDoc from "./docs/button-doc"
+import FabDoc from "./docs/fab-doc"
+import CardDoc from "./docs/card-doc"
 
-import "./App.css";
+import "./App.css"
 
-class App extends Component {
-  render() {
-    const styles = {
-      margin: 10
-    };
-    return (
-      <div>
-        <div className="App-header">
-          <h2>React MDC Web</h2>
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <div>
+          <div className="App-header">
+            <h2>React MDC Web</h2>
+            <Link to="/">HOME</Link>
+          </div>
+
+          <div className="App-detail">
+            <Route exact path="/" component={Home} />
+            <Route path="/button" component={ButtonDoc} />
+            <Route path="/fab" component={FabDoc} />
+            <Route path="/card" component={CardDoc} />
+          </div>
         </div>
-        <div style={styles}>
-          <ButtonExample styles={styles} />
-          <FabExample styles={styles} />
-          <CardExample />
-        </div>
-      </div>
-    );
-  }
+      </Router>
+    </div>
+  )
 }
 
-export default App;
+export default App

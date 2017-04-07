@@ -2,9 +2,12 @@ import React from "react";
 import { Card, CardHeader, CardTitle, CardSubTitle, CardText, CardActions } from "../components/mdc/Card";
 import Button from '../components/mdc/Button';
 
-const CardExample = ({ styles }) => {
+const CardDoc = () => {
+    const styles = {
+        padding: 10
+    }
     return (
-        <div>
+        <div style={styles}>
             <h3>Cards</h3>
             <section>
                 <fieldset>
@@ -19,7 +22,7 @@ const CardExample = ({ styles }) => {
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
                             nisi ut aliquip ex ea commodo consequat.
                         </CardText>
-                        <CardActions vertical>
+                        <CardActions>
                             <Button raised primary compact>Action 1</Button>
                             <Button raised primary accent>Action 2</Button>
                             <Button raised>Action 3</Button>
@@ -31,4 +34,4 @@ const CardExample = ({ styles }) => {
     );
 };
 
-export default CardExample;
+export default CardDoc;

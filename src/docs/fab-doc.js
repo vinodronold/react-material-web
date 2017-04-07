@@ -1,9 +1,12 @@
 import React from "react";
 import Fab from "../components/mdc/Fab";
 
-const FabExample = ({ styles }) => {
+const FabDoc = () => {
+  const styles = {
+    margin: 10
+  }
   return (
-    <div>
+    <div style={styles}>
       <h3>FAB</h3>
       <section>
         <fieldset>
@@ -13,7 +16,7 @@ const FabExample = ({ styles }) => {
           <Fab style={styles}>favorite</Fab>
           <Fab style={styles} mini>favorite</Fab>
         </fieldset>
-        
+
         <fieldset>
           <legend>Ripple Fabs</legend>
           <Fab style={styles} ripple plain>favorite</Fab>
@@ -26,4 +29,4 @@ const FabExample = ({ styles }) => {
   );
 };
 
-export default FabExample;
+export default FabDoc;

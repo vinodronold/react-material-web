@@ -1,3 +1,4 @@
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -5,8 +6,18 @@
   color: white;
 }
 
-.App-intro {
-  font-size: large;
+.App-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.App-detail a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  color: tomato;
 }
 
 fieldset{

@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardHeader, CardTitle, CardSubTitle, CardText, CardActions } from "../components/mdc/Card";
-import Button from '../components/mdc/Button';
+import { Card, CardHeader, CardTitle, CardSubTitle, CardText, CardActions } from "../components/mdc/card";
+import Button from '../components/mdc/button';
 
 const CardDoc = () => {
     const styles = {

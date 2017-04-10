@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from "react"
+import React, { Component } from 'react'
+import { bool, node, string } from 'prop-types'
 import classnames from "classnames"
 import Ripple from '../ripple'
 import { themeDark } from '../theme/const'
@@ -8,17 +9,17 @@ import "@material/button/dist/mdc.button.min.css"
 class Button extends Component {
 
   static propTypes = {
-    accent: PropTypes.bool,
-    children: PropTypes.node,
-    className: PropTypes.string,
-    compact: PropTypes.bool,
-    dark: PropTypes.bool,
-    dense: PropTypes.bool,
-    fab: PropTypes.bool,
-    href: PropTypes.string,
-    primary: PropTypes.bool,
-    raised: PropTypes.bool,
-    ripple: PropTypes.bool
+    accent: bool,
+    children: node,
+    className: string,
+    compact: bool,
+    dark: bool,
+    dense: bool,
+    fab: bool,
+    href: string,
+    primary: bool,
+    raised: bool,
+    ripple: bool
   }
 
   render() {

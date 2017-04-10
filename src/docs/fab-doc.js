@@ -1,5 +1,5 @@
 import React from "react";
-import Fab from "../components/mdc/Fab";
+import Fab from "../components/mdc/fab";
 
 const FabDoc = () => {
   const styles = {

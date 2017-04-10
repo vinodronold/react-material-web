@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/mdc/Button";
+import Button from "../components/mdc/button";
 const ButtonDoc = () => {
   const styles = {
     margin: 10

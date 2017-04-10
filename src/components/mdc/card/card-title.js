@@ -1,11 +1,12 @@
-import React, { PropTypes } from "react"
-import classnames from "classnames"
+import React from 'react'
+import {bool, node, string} from 'prop-types'
+import classnames from 'classnames'
 import { baseClassName } from './const'
 
 const _propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    large: PropTypes.bool
+    children: node,
+    className: string,
+    large: bool
 }
 
 const CardTitle = ({ children, className, large, ...otherProps }) => {

@@ -14,7 +14,7 @@ const CardSubTitle = ({ children, className, ...otherProps }) => {
         [`${baseClassName}__subtitle`],
         className
     )
-
+    
     return (
         <h2 className={_cls} {...otherProps}>{children}</h2>
     )

@@ -19,7 +19,6 @@ const CardActions = ({ children, className, dark, vertical, ...otherProps }) => 
     )
 
     const _actionChildren = React.Children.map(children, (action, idx) => {
-        console.log(action.props.compact)
         return React.cloneElement(action,
             {
                 key: idx,

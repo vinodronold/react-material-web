@@ -1,0 +1,17 @@
+.mdc-card__avatar .mdc-card__primary {
+    position: relative;
+}
+
+.mdc-card__avatar .mdc-card__title,
+.mdc-card__avatar .mdc-card__subtitle {
+    margin-left: 56px;
+}
+
+.mdc-card__avatar .mdc-card__avatar--display {
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+

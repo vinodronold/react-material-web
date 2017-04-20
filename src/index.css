@@ -1,6 +1,6 @@
 :root {
   --mdc-theme-primary: #006064;
-  --mdc-theme-secondary: #f57f17;
+  --mdc-theme-accent: #f57f17;
 }
 
 body {
